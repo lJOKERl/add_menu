@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Генерация меню</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="main">
+        <div class="options">
+            <label>
+                <input type="radio" class="radio" name="menu" onclick="changeIcon(this)" id="hor">
+                <i class="fa fa-toggle-off" aria-hidden="true"></i> Горизонтальное
+            </label><br>
+            <label>
+                <input type="radio" class="radio" name="menu" onclick="changeIcon(this)" id="vert">
+                <i class="fa fa-toggle-off" aria-hidden="true"></i> Вертикальное
+            </label><br>
+
+            <div class="input_name">
+                Количество пунктов:
+                <input type="text" name="" class="val">
+            </div>
+        </div>
+        <div class="result">
+            
+        </div>
+    </div>
+</body>
+
+ <script src="script.js"></script>
+</html>
