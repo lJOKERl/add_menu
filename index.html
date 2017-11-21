@@ -20,9 +20,28 @@
                 <i class="fa fa-toggle-off" aria-hidden="true"></i> Вертикальное
             </label><br>
 
-            <div class="input_name">
-                Количество пунктов:
-                <input type="text" name="" class="val">
+            <div class="selects">
+                <span>Пункты меню:</span>
+                <select id="items" onchange="getItems(this)">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                    <option value="">7</option>
+                    <option value="">8</option>
+                    <option value="">9</option>
+                </select><br>
+
+                <span>Подпункты меню:</span>
+                <select id="subitems" onchange="getsItems(this)">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                </select>
             </div>
         </div>
         <div class="result">

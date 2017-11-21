@@ -1,10 +1,12 @@
 "use strict";
 
-var hor = document.querySelector('#hor'),
-	vert = document.querySelector('#vert'),
+var div = document.createElement("div"),
+	hor = document.querySelector('#hor'),
 	val = document.querySelector('#val'),
-	div = document.createElement("div"),
-	result = document.querySelector(".result");
+	vert = document.querySelector('#vert'),
+	items = document.querySelector("#items"),
+	result = document.querySelector(".result"),
+	subitems = document.querySelector("#subitems")
 
 	div.className = "menu";
 
@@ -30,5 +32,53 @@ hor.onchange = function () {
 vert.onchange = function () {
 	div.classList.add("vertical");
 	div.classList.remove("horizontal");
-
+	result.appendChild(div);
 }
+
+function getItems (select) {
+		var res = (select.options[select.selectedIndex].text)*1;
+		generateMenu(res);
+}
+
+function constructMenu(argument) {
+	var menu = document.querySelector(".menu"),
+		ul = document.createElement("ul"),
+		li = document.createElement("li"),
+		a = document.createElement("a");
+
+	a.href = "#";
+
+	menu.appendChild(li).appendChild(a).textContent = "Пункт меню";
+}
+
+function generateMenu(getItems) {
+	for (var i = 0; i < getItems; i++) {
+		constructMenu();
+	}
+}
+
+
+function multiplyAll(arr) {
+  var product = 1;
+  // Измените код только под комментарием
+  for(var i=0; i < arr.length; i++) {
+  	for(var k=0; k < arr[i].length; k++) {
+  		product *= arr[i][k];
+	  }
+
+  }
+  
+  // Измените код только над этим комментарием
+  return product;
+}
+
+// Измените значение аргумента для проверки
+multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+
+
+
+(function () {
+
+	
+})();
